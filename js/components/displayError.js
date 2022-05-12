@@ -1,0 +1,1 @@
+const displayError = (message = "Something is wrong!") => `<p class="error">${message}</p>`

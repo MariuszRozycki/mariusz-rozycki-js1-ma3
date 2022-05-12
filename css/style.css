@@ -1,5 +1,6 @@
 body {
-  background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(0, 255, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .loader {
@@ -70,4 +71,28 @@ body {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+.error {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.catch-error {
+  font-size: 18px;
+}
+
+.catch-error p:nth-child(1) {
+  font-weight: bold;
+}
+
+.error,
+.catch-error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: red;
+  border: 2px solid;
+  padding: 5px 10px;
+  width: 90%;
+  margin: 10px auto;
 }
