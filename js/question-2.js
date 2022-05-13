@@ -9,6 +9,7 @@ const url = `https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=
 async function getData() {
 
   try {
+
     const response = await fetch(url);
     const results = await response.json();
     const resultsData = results.results;
@@ -52,6 +53,7 @@ async function getData() {
       </div>`
     container.innerHTML = displayError() + errorHtml;
     console.log("Error occurred", error);
+
   }
 }
 
