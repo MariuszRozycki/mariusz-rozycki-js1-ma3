@@ -24,19 +24,18 @@ async function getData() {
         break;
       }
 
-      let name = resultsData[i].name;
-      let rating = resultsData[i].rating;
-      let length = resultsData[i].tags.length;
+      const name = resultsData[i].name;
+      const rating = resultsData[i].rating;
+      const length = resultsData[i].tags.length;
 
-      let html =
-        `<div>Game nr ${i + 1}:</div>
-        <span>--------------</span>
-        <p>Title: "${name}"</p>
-        <p>Rating: ${rating} pts</p>
-        <p>Amount of tags: ${length}</p>
-        <br>`;
 
-      container.innerHTML += html;
+
+      container.innerHTML += `<div>Game nr ${i + 1}:</div>
+                              <span>--------------</span>
+                              <p>Title: "${name}"</p>
+                              <p>Rating: ${rating} pts</p>
+                              <p>Amount of tags: ${length}</p>
+                              <br>`;
 
       console.log("name:", i + 1, name);
       console.log("rating:", rating);
@@ -46,12 +45,11 @@ async function getData() {
 
   } catch (error) {
 
-    let errorHtml =
-      `<div class="catch-error">
-        <p>Problem:</p>
-        <p>${error}</p>
-      </div>`
-    container.innerHTML = displayError() + errorHtml;
+
+    container.innerHTML = displayError() + `<div class="catch-error">
+                                              <p>Problem:</p>
+                                              <p>${error}</p>
+                                            </div>`;
     console.log("Error occurred", error);
 
   }
